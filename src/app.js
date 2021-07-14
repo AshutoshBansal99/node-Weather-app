@@ -8,6 +8,7 @@ const forecast = require('./utiles/forecast')
 
 const app = express()
 
+const port = porocess.env.PORT || 3000
 
 
 //Define paths for express config
@@ -106,6 +107,6 @@ app.get('*', (req, res) => {
 })
 
 // set the localhost domain.
-app.listen(3000, () => {
-    console.log('Server is up');
+app.listen(port, () => {
+    console.log('Server is up port' + port);
 })
